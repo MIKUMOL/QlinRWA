@@ -1,0 +1,108 @@
+/* Hintergrund + Centering */
+.landing-root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #eff6ff; /* Qlin light blue */
+  padding: 24px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* Card */
+.landing-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 22px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.12);
+  text-align: center;
+  animation: pop-in 500ms ease;
+}
+
+/* Logo */
+.landing-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 12px auto;
+}
+
+/* Text */
+.landing-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+  color: #0f172a;
+  letter-spacing: 0.5px;
+}
+
+.landing-subtitle {
+  margin-top: 6px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  color: #64748b;
+}
+
+/* Buttons */
+.landing-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-patient {
+  background: #1976d2;
+  color: white;
+  box-shadow: 0 8px 18px rgba(25, 118, 210, 0.28);
+}
+
+.btn-patient:hover {
+  filter: brightness(0.95);
+  box-shadow: 0 10px 22px rgba(25, 118, 210, 0.34);
+}
+
+.btn-doctor {
+  background: #15997b;
+  color: white;
+  box-shadow: 0 8px 18px rgba(21, 153, 123, 0.28);
+}
+
+.btn-doctor:hover {
+  filter: brightness(0.95);
+  box-shadow: 0 10px 22px rgba(21, 153, 123, 0.34);
+}
+
+/* Footnote */
+.landing-footnote {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Kleine Animation */
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
