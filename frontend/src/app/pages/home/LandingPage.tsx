@@ -1,15 +1,12 @@
-import "./App.css";
-import qlinLogo from "../assets/qlin_logo.svg"; 
+import "../../styles/pages/home/landing.css";
+import qlinLogo from "../../assets/qlin_logo.svg";
+import { useNavigate } from "react-router-dom";
 
-export default function App() {
-  const handlePatientClick = () => {
-    // später z.B. Login öffnen oder Rolle setzen
-    alert("Patient gewählt ✅ (später hier weiterleiten)");
-  };
+export default function LandingPage() {
+  const navigate = useNavigate();
 
-  const handleDoctorClick = () => {
-    alert("Arzt gewählt ✅ (später hier weiterleiten)");
-  };
+  const handlePatientClick = () => navigate("/patient/dashboard");
+  const handleDoctorClick = () => navigate("/doctor/login");
 
   return (
     <div className="landing-root">
