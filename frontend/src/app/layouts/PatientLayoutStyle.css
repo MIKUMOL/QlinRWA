@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+body {
+  background-color: #eff6ff;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+
+  width: calc(100% - 40px); 
+  padding: 20px 20px 20px 20px;
+
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.bottom-nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 420px;
+  list-style: none;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 55px;
+  height: 55px;
+
+  position: relative;
+
+  border-radius: 16px;
+  transition: all 0.25s ease;
+
+  text-decoration: none !important;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  width: 70px;          
+  height: 70px;
+  border-radius: 18px;
+  background: transparent;
+  transition: all 0.25s ease;
+  z-index: -1; 
+}
+
+.nav-item .icon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.6;
+  transition: 0.25s ease;
+}
+
+.nav-item.active::before {
+  background: #1c456e12; 
+
+  transform: translateY(-6px); 
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.nav-item.active .icon {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 4px rgba(28, 69, 110, 0.2)); 
+}
+
+.nav-item:active {
+  transform: scale(0.92);
+}
+
+
+
+
+.nav-item .label {
+  margin-top: 6px;
+  white-space: nowrap;
+
+  background: #1976d2;      
+  color: white;             
+  font-size: 10.5px;
+  font-weight: 500;
+
+  padding: 4px 8px;      
+  border-radius: 10px;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+
+  pointer-events: none;  
+  
+  text-decoration: none !important;
+}
+
+
+.nav-item.active .label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
